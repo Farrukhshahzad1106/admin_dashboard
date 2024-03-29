@@ -3,7 +3,7 @@ import { BsCurrencyDollar } from 'react-icons/bs';
 import {GoPrimitiveDot} from 'react-icons/go';
 
 import {Stacked, Pie, Button, SparkLine} from '../components';
-import {earningData, sparkLineAreaData, ecomPieChartData} from '../data/dummy';
+import {earningData, sparkLineAreaData, ecomPieChartData, SparklineAreaData} from '../data/dummy';
 import { useStateContext } from '../contexts/ContextProvider';
 
 
@@ -74,7 +74,7 @@ const Ecommerce = () => {
                       <div className='flex item-center gap-4'>
                         <p className='flex items-center gap-2 text-gray-600 
                                       hover:drop-shadow-xl'>
-                          <span> <GoPrimitiveDot/> </span>
+                          <span> <GoPrimitiveDot /> </span>
                           <span>Expense</span>
                         </p>
                         <p className='flex items-center gap-2 text-gray-600 
@@ -93,15 +93,26 @@ const Ecommerce = () => {
                                     <span className='text-3xl font-semibold'>$93,438</span>
                                     <span className='p-1.5 hover:drop-shadow-xl 
                                                     cursor-pointer rounded-full bg-green-300 
-                                                    ml-3 text-xl'>23%</span>
+                                                    ml-3 text-xs'>23%</span>
                                   </p>
                                   <p className='text-gray-500 mt-1'>Budget</p>
                                 </div>
                                 <div className='mt-8'>
                                   <p>
-                                    <span className='text-3xl font-semibold'>$93,438</span>
+                                    <span className='text-3xl font-semibold'>$48,438</span>
                                   </p>
                                   <p className='text-gray-500 mt-1'>Expense</p>
+                                </div>
+                                <div className='mt-5'>
+                                  <SparkLine 
+                                    currentcolor='blue'
+                                    id='line-sparkline'
+                                    type='line'
+                                    height='80px'
+                                    width='250px'
+                                    data={SparklineAreaData}
+                                    color='blue'
+                                  />
                                 </div>
                           </div>
 
